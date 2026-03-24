@@ -1,0 +1,178 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e1e2f, #3a3a5f);
+  background-size: 300% 300%;
+  animation: bgMove 10s ease infinite;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* animated background */
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* =========================
+   HEADER
+========================= */
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+#status {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #00ffd5;
+  opacity: 0.9;
+}
+
+/* =========================
+   INPUT CONTROLS
+========================= */
+
+.controls {
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+input, select, button {
+  width: 280px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* inputs */
+input, select {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+/* dropdown text fix */
+select option {
+  color: black;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 198, 255, 0.4);
+}
+
+button:hover {
+  transform: scale(1.07);
+  background: linear-gradient(45deg, #0072ff, #00c6ff);
+  box-shadow: 0 0 20px rgba(0, 198, 255, 0.6);
+}
+
+/* =========================
+   GLASS CARD
+========================= */
+
+.box {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 70%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  animation: fadeIn 0.8s ease-in-out;
+  text-align: left;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: transform 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   SECTION TITLES
+========================= */
+
+.box h2 {
+  margin-bottom: 10px;
+  color: #00e6e6;
+  font-size: 18px;
+}
+
+/* =========================
+   TEXT CONTENT
+========================= */
+
+#summary, #highlights, #explanation {
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+/* =========================
+   AI VIDEO BOX
+========================= */
+
+#videoBox {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  color: #00ff9d;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,255,200,0.5);
+  box-shadow: 0 0 15px rgba(0,255,200,0.2);
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+  .box {
+    width: 90%;
+  }
+
+  input, select, button {
+    width: 90%;
+  }
+}
