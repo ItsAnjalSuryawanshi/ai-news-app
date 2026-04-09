@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Virtual News Presenter</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Optional Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Background Overlay -->
+<div class="overlay">
+
+  <!-- Header -->
+  <header class="header">
+    <h1>Anigen</h1>
+    <p class="subtitle">AI Powered News Intelligence System</p>
+  </header>
+
+  <!-- Status -->
+  <p id="status" class="status">Ready to analyze news...</p>
+
+  <!-- Controls Card -->
+  <div class="controls">
+
+    <select id="domain">
+      <option value="student">Student Mode</option>
+      <option value="investor">Investor Mode</option>
+      <option value="founder">Founder Mode</option>
+    </select>
+
+    <input type="text" id="url" placeholder="Paste news article URL here">
+
+    <button id="analyzeBtn">Analyze News</button>
+
+  </div>
+
+  <!-- Presenter Section -->
+  <div class="box glass">
+
+    <h2>AI News Presenter</h2>
+    <div id="videoBox">Waiting for input...</div>
+
+  </div>
+
+  <!-- Output Sections -->
+
+  <div class="grid">
+
+    <div class="box glass">
+      <h2>Summary</h2>
+      <div id="summary"></div>
+    </div>
+
+    <div class="box glass">
+      <h2>Highlights</h2>
+      <div id="highlights"></div>
+    </div>
+
+    <div class="box glass">
+      <h2>Explanation</h2>
+      <div id="explanation"></div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Script -->
+<script src="./script.js" defer></script>
+
+</body>
+</html>
